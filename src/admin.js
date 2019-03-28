@@ -36,7 +36,7 @@ export default class Admin extends Component {
       <div>
         <Link
           to="/login"
-          className="d-inline btn btn-sm btn-revenue text-white px-3"
+          className="d-inline btn btn-sm btn-primary text-white px-3"
         >Logout</Link>
         <div className="row">
           <div className="col-md-12">

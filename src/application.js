@@ -159,9 +159,9 @@ export default class Application extends Component {
     render() {
         return (
             <div className="container">
-                <h2>APPLICATION</h2>
 
                 <div className="col-md-12">
+                    <h2>APPLICATION FORM</h2>
                     <Form id="apply" onSubmit={e => this.handleUpload(e)}>
                         {({ error }) => (
                             <>
@@ -291,10 +291,10 @@ export default class Application extends Component {
                     </InputGroup> */}
                                     </div>
 
-                                    <span>Resume: </span><br />
+                                    <p>Resume: </p><br />
                                     <input type="file" name="resume" id="resume" onChange={this.handleResumeFile} /><br />
 
-                                    <span>Passport: </span><br />
+                                    <p>Passport: </p><br />
                                     <input type="file" name="passport" id="passport" onChange={this.handlePassportFile} /> <br />
                                 </div> <br />
 
@@ -302,7 +302,7 @@ export default class Application extends Component {
                                     type="submit"
                                     className="btn btn-revenue text-white mb-2">
                                     Submit
-                  </button>
+                                 </button>
                             </>
                         )}
                     </Form>

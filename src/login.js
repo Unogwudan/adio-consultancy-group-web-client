@@ -115,13 +115,11 @@ export default class Login extends Component {
                                         </InputGroup>
                                     </div><br />
 
-
-
                                     <button
                                         type="submit"
-                                        className="btn btn-revenue text-white mb-2">
+                                        className="btn btn-primary text-white mb-2">
                                         Submit
-                  </button>
+                                    </button>
                                 </div>
                             </>
                         )}
