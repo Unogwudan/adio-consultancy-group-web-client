@@ -43,6 +43,9 @@ class App extends Component {
         <Route path="/admin" component={Admin} />
         <Route path="/login" component={Login} />
 
+        <div className="container">
+
+        </div>
       </div >
     );
   }

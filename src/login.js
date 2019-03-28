@@ -75,12 +75,12 @@ export default class Login extends Component {
             <div className="container">
                 <h2>Login</h2>
 
-                <div className="col-md-12">
+                <div className="col-md-8">
                     <Form id="apply" onSubmit={e => this.login(e)}>
                         {({ error }) => (
                             <>
                                 <div className="form-row">
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-md-4">
                                         <InputGroup validate={["username"]}>
                                             {({ error }) => (
                                                 <div>
@@ -97,7 +97,7 @@ export default class Login extends Component {
                                             )}
                                         </InputGroup>
                                     </div><br />
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-md-4">
                                         <InputGroup validate={["password"]}>
                                             {({ error }) => (
                                                 <div>
@@ -114,12 +114,13 @@ export default class Login extends Component {
                                             )}
                                         </InputGroup>
                                     </div><br />
-
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary text-white mb-2">
-                                        Submit
+                                    <div className="form-group col-md-6">
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary text-white mb-2">
+                                            Login
                                     </button>
+                                    </div>
                                 </div>
                             </>
                         )}

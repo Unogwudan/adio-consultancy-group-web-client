@@ -212,23 +212,8 @@ export default class Application extends Component {
                                                 value={this.state.email}
                                                 onChange={e => this.onChange(e)}
                                             />
-                                            {/* {this.displayError(error)} */}
                                         </div>
-                                        {/* <InputGroup validate={["email"]}>
-                      {({ error }) => (
-                        <div>
-                          <input
-                            required
-                            className="form-control"
-                            placeholder="Email"
-                            name="email"
-                            value={this.state.email}
-                            onChange={e => this.onChange(e)}
-                          />
-                          {this.displayError(error)}
-                        </div>
-                      )}
-                    </InputGroup> */}
+
                                     </div><br />
 
                                     <div className="form-group col-md-6">
@@ -243,27 +228,13 @@ export default class Application extends Component {
                                             />
                                             {this.displayError(error)}
                                         </div>
-                                        {/* <InputGroup validate={["phoneNumber"]}>
-                      {({ error }) => (
-                        <div>
-                          <input
-                            required
-                            className="form-control"
-                            placeholder="Phone"
-                            name="phoneNumber"
-                            value={this.state.phoneNumber}
-                            onChange={e => this.onChange(e)}
-                          />
-                          {this.displayError(error)}
-                        </div>
-                      )}
-                    </InputGroup> */}
+
                                     </div><br />
 
                                     <div className="form-group col-md-6">
                                         <div>
-                                            <input
-                                                type="text"
+                                            <textarea
+
                                                 required
                                                 className="form-control"
                                                 placeholder="Cover Letter"
@@ -271,36 +242,26 @@ export default class Application extends Component {
                                                 value={this.state.coverLetter}
                                                 onChange={e => this.onChange(e)}
                                             />
-                                            {/* {this.displayError(error)} */}
                                         </div>
-                                        {/* <InputGroup validate={["coverLetter"]}>
-                      {({ error }) => (
-                        <div>
-                          <input
-                            type="text"
-                            required
-                            className="form-control"
-                            placeholder="Cover Letter"
-                            name="coverLetter"
-                            value={this.state.coverLetter}
-                            onChange={e => this.onChange(e)}
-                          />
-                          {this.displayError(error)}
-                        </div>
-                      )}
-                    </InputGroup> */}
+
                                     </div>
 
-                                    <p>Resume: </p><br />
-                                    <input type="file" name="resume" id="resume" onChange={this.handleResumeFile} /><br />
+                                    <div className="form-group col-md-3">
+                                        <span>Resume </span>
+                                        <input type="file" name="resume" id="resume" onChange={this.handleResumeFile} />
 
-                                    <p>Passport: </p><br />
-                                    <input type="file" name="passport" id="passport" onChange={this.handlePassportFile} /> <br />
-                                </div> <br />
+                                    </div>
+
+                                    <div className="form-group col-md-3">
+                                        <span>Passport </span>
+                                        <input type="file" name="passport" id="passport" onChange={this.handlePassportFile} />
+                                    </div>
+
+                                </div>
 
                                 <button
                                     type="submit"
-                                    className="btn btn-revenue text-white mb-2">
+                                    className="btn btn-primary text-white mb-2">
                                     Submit
                                  </button>
                             </>
