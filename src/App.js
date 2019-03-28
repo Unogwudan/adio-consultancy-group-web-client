@@ -1,26 +1,49 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { Form, InputGroup } from "react-html5-form";
+import { NavLink, Link } from "react-router-dom";
+import Application from './application';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  withRouter
+} from "react-router-dom";
 import './App.css';
+import Admin from './admin';
+import Login from './login';
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <div className="container">
+
+        <nav>
+          <ul className="list-unstyled components">
+            <li className="nav-item">
+              <a className="nav-link">
+                <NavLink to="/application" className="d-inline">
+                  Apply
+                  </NavLink>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                <NavLink to="/admin" className="d-inline">
+                  Admin
+                </NavLink>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* <Route path="/" exact component={} /> */}
+        <Route path="/application" component={Application} />
+        <Route path="/admin" component={Admin} />
+        <Route path="/login" component={Login} />
+
+      </div >
     );
   }
 }

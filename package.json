@@ -1,10 +1,14 @@
 {
-  "name": "redux-app",
+  "name": "adio-consultancy-group",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-html5-form": "^1.0.9",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {
