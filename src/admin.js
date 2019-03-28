@@ -37,7 +37,7 @@ export default class Admin extends Component {
         <Link
           to="/login"
           className="d-inline btn btn-sm btn-primary text-white px-3"
-        >Logout</Link>
+        >Logout</Link>a
         <div className="row">
           <div className="col-md-12">
             <table className="table table-sm">

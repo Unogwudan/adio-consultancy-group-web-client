@@ -32,7 +32,7 @@ export default class Login extends Component {
         return (
             error && (
                 <div className="col-md-12">
-                    <p style={this.errorStyles}>{error}</p>
+                    <p style={{ color: "red" }}>{error}</p>
                 </div>
             )
         );
