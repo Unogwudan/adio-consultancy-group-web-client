@@ -53,11 +53,11 @@ export default class Application extends Component {
 
             if (!(sFileExtension === "pdf" ||
                 sFileExtension === "doc" ||
-                sFileExtension === "docx") || iFileSize > 2000000) { /// 10 mb
+                sFileExtension === "docx") || iFileSize > 2000000) { /// 2 mb
                 var txt;
                 txt = "File type : " + sFileExtension + "\n\n";
                 txt += "Size: " + iConvert + " MB \n\n";
-                txt += "Please make sure your file is in pdf or doc format and less than 10 MB.\n\n";
+                txt += "Please make sure your file is in pdf or doc format and less than 2 MB.\n\n";
                 alert(txt);
                 return;
             } else {
@@ -81,11 +81,11 @@ export default class Application extends Component {
             var iFileSize = file.size;
             var iConvert = (file.size / 1048576).toFixed(2);
 
-            if (!(sFileExtension === "jpeg") || iFileSize > 100000) { /// 10 mb
+            if (!(sFileExtension === "jpeg") || iFileSize > 100000) { /// 100 KB
                 var txt;
                 txt = "File type : " + sFileExtension + "\n\n";
                 txt += "Size: " + iConvert + " MB \n\n";
-                txt += "Please make sure your file is in jpeg format and less than 10 MB.\n\n";
+                txt += "Please make sure your file is in jpeg format and less than 100 KB.\n\n";
                 alert(txt);
                 return;
             } else {
@@ -249,12 +249,13 @@ export default class Application extends Component {
                                     <div className="form-group col-md-3">
                                         <span>Resume </span>
                                         <input type="file" name="resume" id="resume" onChange={this.handleResumeFile} />
-
+                                        <span style={{ color: "red" }}>Please make sure your file is in pdf or doc format and less than 2 MB</span>
                                     </div>
 
                                     <div className="form-group col-md-3">
                                         <span>Passport </span>
                                         <input type="file" name="passport" id="passport" onChange={this.handlePassportFile} />
+                                        <span style={{ color: "red" }}>Please make sure your file is in jpeg format and less than 100 KB</span>
                                     </div>
 
                                 </div>
